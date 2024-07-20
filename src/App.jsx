@@ -4,6 +4,8 @@ import Navbar from './components/Navbar'
 import Body from './components/Body'
 import Chapter from './components/Chapter';
 import Quotes from './components/Quotes';
+import ChapterList from './components/ChapterList';
+import VerseData from './components/VerseData';
 
 const App = () => {
      const [isDarkMode, setIsDarkMode] = useState(false);
@@ -15,9 +17,11 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Body />} />
-          <Route path="/chapter" element={<Chapter />} />
+          <Route path="/chapter" element={<ChapterList />} />
+          <Route path="/chapter/:chapterId" element={<Chapter />} />
           <Route path="/quotes" element={<Quotes />} />
-          
+          <Route path="/chapter/:chapterId/verse/:verseId" element={<VerseData />} />
+
         </Routes>
       </div>
     </div>
