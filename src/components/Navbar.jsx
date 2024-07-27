@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { DropdownIcon, LanguageIcon, MoonIcon, SunIcon } from './Icons';
 import { ThemeContext } from '../context/ThemeProvider';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const { theme, setTheme , setLanguage } = useContext(ThemeContext);
@@ -19,9 +20,9 @@ const Navbar = () => {
             </div>
             <div className='hidden sm:flex gap-7  md:mr-60'>
            
-                <button className='h-full flex justify-center items-center text-white font-bold md:text-2xl gap-2'>Chapters
-                </button>
-                <button className='h-full flex justify-center items-center text-white font-bold md:text-2xl'>About Gita</button>
+                <Link to={'/chapter'} className='h-full flex justify-center items-center text-white font-bold md:text-2xl gap-2'>Chapters
+                </Link>
+                <Link to={'/'} className='h-full flex justify-center items-center text-white font-bold md:text-2xl'>About Gita</Link>
             </div>
             <div className='flex justify-center items-center h-full gap-2'>
                 {theme === 'dark' ? (
