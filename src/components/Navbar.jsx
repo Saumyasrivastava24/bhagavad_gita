@@ -16,7 +16,7 @@ const Navbar = () => {
         }}>
             <div className='flex items-center'>
                 <img src="/book_img.png" className='w-10 md:w-14' alt="Book" />
-                <h1 className='animate-pulse text-xl md:text-4xl font-bold cursor-pointer text-white'>Bhagavad Gita</h1>
+                <Link to={'/'} className='animate-pulse text-xl md:text-4xl font-bold cursor-pointer text-white'>Bhagavad Gita</Link>
             </div>
             <div className='hidden sm:flex gap-7  md:mr-60'>
            
@@ -31,16 +31,16 @@ const Navbar = () => {
                     <MoonIcon onClick={() => setTheme('dark')} className='w-5 cursor-pointer  object-contain' />
                 )}
                 <div className='relative w-10'>
-                    {isdropdown ? (<div className='absolute -top-3 leading-tight'>
+                    {isdropdown ? (<div className='absolute z-50 -top-3 leading-tight'>
                         <DropdownIcon onClick={()=>setisDropdown(false)} className='cursor-pointer ' />
                         <p onClick={() => {
                             setLanguage('hi')
                             setisDropdown(false)
-                            }} className='text-white font-bold cursor-pointer bg-[rgba(36,22,14,0.72)]'>Hi</p>
+                        }} className='text-white  rounded py-1 px-3 font-bold cursor-pointer  bg-[rgba(36,22,14,0.72)]'>Hi</p>
                         <p onClick={() => {
                             setLanguage('en')
                             setisDropdown(false)
-                            }} className='text-white font-bold cursor-pointer bg-[rgba(36,22,14,0.72)]'>En</p>
+                        }} className='text-white  rounded py-1 px-3 font-bold cursor-pointer bg-[rgba(36,22,14,0.72)]'>En</p>
                     </div>) : (<LanguageIcon onClick={()=>setisDropdown(true)} className='cursor-pointer  ' />)} 
 
                 </div>
