@@ -47,10 +47,9 @@ const ChapterList = () => {
     { "chapterNumber": 18, "chapterTitle": "मोक्ष संन्यास योग" }
   ];
 
-
   return (
     <div className="px-2 md:px-4">
-      {language==='en' &&  data.map((chapter, index) => (
+      {language === 'en' && data.map((chapter, index) => (
         <div
           onClick={() => navigate(`/chapter/${chapter.chapterNumber}`)}
           key={index}
@@ -66,7 +65,7 @@ const ChapterList = () => {
           <p className='text-white text-base md:text-xl leading-loose'>{chapter.chapterTitle}</p>
         </div>
       ))}
-      {language==='hi' &&  dataHi.map((chapter, index) => (
+      {language === 'hi' && dataHi.map((chapter, index) => (
         <div
           onClick={() => navigate(`/chapter/${chapter.chapterNumber}`)}
           key={index}

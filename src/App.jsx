@@ -6,6 +6,7 @@ import Chapter from './components/Chapter';
 import ChapterList from './components/ChapterList';
 import VerseData from './components/VerseData';
 import { ThemeContext } from './context/ThemeProvider';
+import AboutPage from './components/AboutPage';
 
 const App = () => {
   const { theme, setTheme} = useContext(ThemeContext);
@@ -19,6 +20,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Body />} />
             <Route path="/chapter" element={<ChapterList />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/chapter/:chapterId" element={<Chapter />} />
             <Route path="/chapter/:chapterId/verse/:verseId" element={<VerseData />} />
 
